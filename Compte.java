@@ -38,13 +38,13 @@ public abstract class Compte extends Exception implements iCompte{
             throw new negativemtException("le montant doit etre superior a 0");
         }else{
             solde+=montant;
-            Versement versement = new Versement(new Date(),montant);
+            Versement versement = new Versement(montant);
             listOperation.add(versement);
         }
     }
     public void retirer(double montant)throws Exception{
         solde-=montant;
-        Retrait retrait = new Retrait(new Date(),montant);
+        Retrait retrait = new Retrait(montant);
         listOperation.add(retrait);
     }
     public void versement(double montant,Compte compte) throws Exception {

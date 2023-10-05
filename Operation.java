@@ -6,8 +6,8 @@ public class Operation {
     private int numero;
     private Date dateOperation;
     private double montant;
-    public Operation(Date date, double montant) {
-        this.numero +=1;
+    public Operation(double montant) {
+        ++this.numero;
         this.dateOperation = new Date();
         this.montant = montant;
     }
