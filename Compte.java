@@ -18,6 +18,10 @@ public abstract class Compte extends Exception implements iCompte{
         this.listOperation = new ArrayList<>();
     }
 
+    public int getCode() {
+        return code;
+    }
+
     public double getSolde() {
         return solde;
     }
